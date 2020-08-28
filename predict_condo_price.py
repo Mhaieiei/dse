@@ -55,7 +55,6 @@ def get_predict(data):
     'lat': lat,
     'long': long,
     'min_dist': min_dist,
-    'predict': ans,
     'price predict': 234567
   }
   return {'result':res}
