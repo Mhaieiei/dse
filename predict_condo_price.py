@@ -23,11 +23,11 @@
 #     return 'model created'
 
 ### load model
-import pickle
-mod = pickle.load(open('sentiment.mod','rb'))
+# import pickle
+# mod = pickle.load(open('sentiment.mod','rb'))
 def get_predict(data):
-  ans = mod.predict(["ดีมาก"].reshape(-1, 1))[0]
-  print(ans)
+  # ans = mod.predict(["ดีมาก"])[0]
+  # print(ans)
   condo_area = data.get('condo-area', 'Bang Kapi')
   address = data.get('address', 'ถนนเสรีไทย คลองจั่น บางกะปิ')
   year = data.get('year', '2011')
