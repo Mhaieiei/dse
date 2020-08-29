@@ -35,7 +35,6 @@ def get_predict(data):
     'Area_m2': data.get('sqm', 4695.5),
     '#_Tower': data.get('tower', 1),
     '#_Floor': data.get('floor', 8),
-    'Sale_Price_Sqm': data.get('price-sqm', 52065),
     'Rental_Yield': data.get('rent-yeild', 5.16),
     'Latitude': data.get('lat', 13.738209),
     'Longtitude': data.get('long', 100.566949),
