@@ -28,33 +28,21 @@
 def get_predict(data):
   # ans = mod.predict(["ดีมาก"])[0]
   # print(ans)
-  condo_area = data.get('condo-area', 'Bang Kapi')
-  address = data.get('address', 'ถนนเสรีไทย คลองจั่น บางกะปิ')
-  year = data.get('year', '2011')
-  sqm = data.get('sqm', 6470)
-  tower = data.get('tower', 2)
-  floor = data.get('floor', 30)
-  price_sqm = data.get('price-sqm', 52065)
-  rent_yeild = data.get('rent-yeild', 5.81)
-  rent_yeild_inc = data.get('rent-yeild-inc-year', -23.79)
-  lat = data.get('lat', 13.758903)
-  long = data.get('long', 100.649395)
-  min_dist = data.get('min-dist-station', 3757)
-  print(condo_area, address, year, sqm, tower, floor, price_sqm, rent_yeild)
-  # feat = bn.nlp.text(sen).getw2v_light()
-  res = {
-    'condo_area': condo_area,
-    'address': address,
-    'year': year,
-    'sqm': sqm,
-    'tower': tower,
-    'floor': floor,
-    'price_sqm': price_sqm,
-    'rent_yeild': rent_yeild,
-    'rent_yeild_inc': rent_yeild_inc,
-    'lat': lat,
-    'long': long,
-    'min_dist': min_dist,
-    'price predict': 234567
+  obj = {
+    'Condo_area': data.get('condo-area', 'Bang Kapi'),
+    'Adress_TH': data.get('address', 'ถนนเสรีไทย'),
+    'Year_built': data.get('year', '2009'),
+    'Area_m2': data.get('sqm', 4695.5),
+    '#_Tower': data.get('tower', 1),
+    '#_Floor': data.get('floor', 8),
+    'Sale_Price_Sqm': data.get('price-sqm', 52065),
+    'Rental_Yield': data.get('rent-yeild', 5.16),
+    'Latitude': data.get('lat', 13.738209),
+    'Longtitude': data.get('long', 100.566949),
+    'MinDist_Station': data.get('min-dist-station', 1833.883835)
   }
-  return {'result':res}
+  print(obj)
+
+  # calculate price from model 
+  price = 1234567
+  return {'result': price}
